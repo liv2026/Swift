@@ -1,19 +1,24 @@
-//
-//  ContentView.swift
-//  Journal
-//
-//  Created by Lopes, Olivia on 3/20/24.
-//
-
 import SwiftUI
 
 struct ContentView: View {
     var body: some View {
         VStack {
-            Image(systemName: "globe")
+            Text("Journal")
+                .font(.largeTitle)
+                .bold()
+                .padding(100)
+            Image(systemName: "lock")
                 .imageScale(.large)
                 .foregroundStyle(.tint)
-            Text("Hello, world!")
+            Text("How are you?")
+                .font(.headline)
+            Button("Good") {
+                print(Image(systemName: "hand.thumbsUp"))
+            }
+            .padding()
+            Button("Unfortunate"){
+                print(Image(systemName: "hand.thumbsDown"))
+            }
         }
         .padding()
     }
